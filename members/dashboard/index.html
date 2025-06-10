@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - Ukombozini Nextgen Women Limited</title>
+    <meta name="description" content="Member dashboard for Ukombozini Nextgen Women Limited table banking groups">
+    <link rel="stylesheet" href="../../assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/paroti.css">
+    <link rel="stylesheet" href="../../assets/vendors/fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header will be included via JavaScript -->
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url(../../assets/images/backgrounds/page-header-1-1.jpg);"></div>
+            <div class="container">
+                <h2>Member Dashboard</h2>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li>Dashboard</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-3">
+                        <div class="dashboard-sidebar">
+                            <div class="user-info text-center mb-4">
+                                <div class="user-avatar mb-3">
+                                    <img src="../../assets/images/resources/placeholder-user.jpg" alt="User Avatar" class="rounded-circle" width="100">
+                                </div>
+                                <h4 class="user-name">Welcome, <span id="memberName">Member</span></h4>
+                            </div>
+                            <ul class="nav flex-column dashboard-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#overview">Overview</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contributions">My Contributions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#loans">Loans</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#meetings">Meetings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#documents">Documents</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="col-lg-9">
+                        <!-- Overview Section -->
+                        <div id="overview" class="dashboard-section mb-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Overview</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="stat-card bg-primary text-white p-3 rounded">
+                                                <h5>Total Savings</h5>
+                                                <h3>KSh <span id="totalSavings">0</span></h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="stat-card bg-success text-white p-3 rounded">
+                                                <h5>Active Loans</h5>
+                                                <h3>KSh <span id="activeLoans">0</span></h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="stat-card bg-info text-white p-3 rounded">
+                                                <h5>Group Share</h5>
+                                                <h3><span id="groupShare">0</span>%</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contributions Section -->
+                        <div id="contributions" class="dashboard-section mb-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">My Contributions</h3>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Type</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="contributionsTable">
+                                                <!-- Will be populated by JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Loans Section -->
+                        <div id="loans" class="dashboard-section mb-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Loans</h3>
+                                    <div class="loan-actions mb-4">
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loanApplicationModal">
+                                            Apply for Loan
+                                        </button>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Loan ID</th>
+                                                    <th>Amount</th>
+                                                    <th>Date</th>
+                                                    <th>Status</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="loansTable">
+                                                <!-- Will be populated by JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Meetings Section -->
+                        <div id="meetings" class="dashboard-section mb-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Upcoming Meetings</h3>
+                                    <div id="meetingsCalendar">
+                                        <!-- Will be populated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Documents Section -->
+                        <div id="documents" class="dashboard-section mb-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Documents</h3>
+                                    <div class="documents-list">
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>Table Banking Guidelines</span>
+                                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>Loan Application Form</span>
+                                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>Member Agreement</span>
+                                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loan Application Modal -->
+        <div class="modal fade" id="loanApplicationModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Loan Application</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loanApplicationForm">
+                            <div class="mb-3">
+                                <label class="form-label">Loan Amount (KSh)</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Purpose</label>
+                                <textarea class="form-control" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Repayment Period (Months)</label>
+                                <select class="form-control" required>
+                                    <option value="3">3 Months</option>
+                                    <option value="6">6 Months</option>
+                                    <option value="12">12 Months</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" form="loanApplicationForm" class="btn btn-primary">Submit Application</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer will be included via JavaScript -->
+
+    <script src="../../assets/vendors/jquery/jquery-3.6.1.min.js"></script>
+    <script src="../../assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/paroti.js"></script>
+    <script src="../../assets/js/components/dashboard.js"></script>
+</body>
+</html> 

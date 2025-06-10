@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Registration - Ukombozini Nextgen Women Limited</title>
+    <meta name="description" content="Join Ukombozini Nextgen Women Limited table banking groups">
+    <link rel="stylesheet" href="../../assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/paroti.css">
+    <link rel="stylesheet" href="../../assets/vendors/fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header will be included via JavaScript -->
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url(../../assets/images/backgrounds/page-header-1-1.jpg);"></div>
+            <div class="container">
+                <h2>Member Registration</h2>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li>Registration</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="registration-form">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="registration-form__content">
+                            <h3>Join Our Table Banking Community</h3>
+                            <p>Please fill out the form below to register as a member.</p>
+                            
+                            <form id="registrationForm" class="registration-form__form">
+                                <!-- Personal Information -->
+                                <div class="form-section mb-4">
+                                    <h4>Personal Information</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="firstName">First Name *</label>
+                                                <input type="text" class="form-control" id="firstName" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="lastName">Last Name *</label>
+                                                <input type="text" class="form-control" id="lastName" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="idNumber">ID Number *</label>
+                                                <input type="text" class="form-control" id="idNumber" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="dateOfBirth">Date of Birth *</label>
+                                                <input type="date" class="form-control" id="dateOfBirth" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Information -->
+                                <div class="form-section mb-4">
+                                    <h4>Contact Information</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone Number (M-PESA) *</label>
+                                                <input type="tel" class="form-control" id="phone" placeholder="+254" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email">Email Address</label>
+                                                <input type="email" class="form-control" id="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="address">Physical Address *</label>
+                                                <textarea class="form-control" id="address" rows="3" required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Group Preferences -->
+                                <div class="form-section mb-4">
+                                    <h4>Group Preferences</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="preferredLocation">Preferred Group Location *</label>
+                                                <select class="form-control" id="preferredLocation" required>
+                                                    <option value="">Select Location</option>
+                                                    <option value="nairobi">Nairobi</option>
+                                                    <option value="mombasa">Mombasa</option>
+                                                    <option value="kisumu">Kisumu</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="monthlyContribution">Monthly Contribution (KSh) *</label>
+                                                <input type="number" class="form-control" id="monthlyContribution" min="1000" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="businessInterest">Business Interest</label>
+                                                <textarea class="form-control" id="businessInterest" rows="3" placeholder="Describe your current business or business interest"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="form-section mb-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="termsAccepted" required>
+                                        <label class="form-check-label" for="termsAccepted">
+                                            I agree to the <a href="../../privacy-policy.html">Terms and Conditions</a> and <a href="../../privacy-policy.html">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <button type="submit" class="thm-btn">Submit Registration</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer will be included via JavaScript -->
+
+    <script src="../../assets/vendors/jquery/jquery-3.6.1.min.js"></script>
+    <script src="../../assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendors/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../../assets/js/paroti.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Form validation
+            $('#registrationForm').validate({
+                rules: {
+                    firstName: 'required',
+                    lastName: 'required',
+                    idNumber: {
+                        required: true,
+                        minlength: 8
+                    },
+                    dateOfBirth: 'required',
+                    phone: {
+                        required: true,
+                        pattern: /^\+254[0-9]{9}$/
+                    },
+                    email: {
+                        email: true
+                    },
+                    address: 'required',
+                    preferredLocation: 'required',
+                    monthlyContribution: {
+                        required: true,
+                        min: 1000
+                    },
+                    termsAccepted: 'required'
+                },
+                messages: {
+                    phone: {
+                        pattern: 'Please enter a valid Kenyan phone number starting with +254'
+                    },
+                    monthlyContribution: {
+                        min: 'Minimum contribution is KSh 1,000'
+                    }
+                },
+                submitHandler: function(form) {
+                    // Here you would typically send the form data to your server
+                    alert('Registration submitted successfully!');
+                    form.reset();
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
